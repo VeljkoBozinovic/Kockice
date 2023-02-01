@@ -1,0 +1,27 @@
+.winner {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $myColorWhite;
+
+  &-container {
+    text-align: center;
+  }
+
+  p {
+    font-size: 50px;
+    margin: 15px;
+  }
+
+  button {
+    width: 200px;
+    margin: 15px;
+    padding: 20px;
+  }
+}
+
+.winner-hide {
+  display: none;
+}

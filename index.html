@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kockice</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="start">
+      <form>
+        <div class="start-form-first-pair">
+          <label for="player1">Player 1 nickname: </label>
+          <input
+            type="text"
+            id="player1"
+            placeholder="Player 1"
+            name="players"
+          />
+        </div>
+        <div class="start-form-second-pair">
+          <label for="player2">Player 2 nickname: </label>
+          <input
+            type="text"
+            id="player2"
+            placeholder="Player 2"
+            name="players"
+          />
+        </div>
+        <input type="submit" value="Start" />
+      </form>
+    </div>
+    <main>
+      <div class="container">
+        <div class="container-player">
+          <div class="container-player-header">
+            <h1 class="playerOneName">Player 1</h1>
+            <div
+              class="container-player-header-arrowRight displayTurnRight"
+            ></div>
+          </div>
+          <img
+            class="playerOneDice"
+            src="images/dice-placeholder.png"
+            alt="kockica"
+          />
+          <div class="container-player-scores">
+            <p class="playerOneScore">Score:</p>
+            <p class="playerOneCurrent">Current:</p>
+          </div>
+        </div>
+        <div class="container-player">
+          <div class="container-player-header">
+            <h1 class="playerTwoName">Player 2</h1>
+            <div class="container-player-header-arrowLeft"></div>
+          </div>
+          <img
+            class="playerTwoDice"
+            src="images/dice-placeholder.png"
+            alt="kockica"
+          />
+          <div class="container-player-scores">
+            <p class="playerTwoScore">Score:</p>
+            <p class="playerTwoCurrent">Current:</p>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="btnRoll">Roll</button>
+        <button class="btnStore">Store</button>
+      </div>
+    </main>
+    <div class="winner winner-hide">
+      <div class="winner-container">
+        <p class="winner-container-player-name"></p>
+        <p>IS A WINNER!!!</p>
+        <button class="btnNewGame">New Game</button>
+      </div>
+    </div>
+    <script src="scripts/start.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/win.js"></script>
+  </body>
+</html>

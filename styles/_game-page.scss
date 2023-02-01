@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  height: 100vh;
+
+  &-player {
+    flex: 1;
+    text-align: center;
+    border: 1px solid $myColorBlack;
+    position: relative;
+
+    h1 {
+      font-size: 80px;
+    }
+
+    > img {
+      width: 200px;
+      margin: 100px;
+    }
+
+    &-header {
+      &-arrowRight {
+        height: 40px;
+      }
+
+      .displayTurnRight {
+        border-top: 20px solid transparent;
+        border-left: 20px solid transparent;
+        border-right: 20px solid $myColorBlack;
+        border-bottom: 20px solid transparent;
+      }
+
+      &-arrowLeft {
+        height: 40px;
+      }
+
+      .displayTurnLeft {
+        border-top: 20px solid transparent;
+        border-left: 20px solid $myColorBlack;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+      }
+    }
+
+    &-scores {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: auto;
+      padding: 5em;
+
+      p {
+        text-align: left;
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+
+  button {
+    display: block;
+    width: 150px;
+    margin: 5px;
+    padding: 20px;
+  }
+}
