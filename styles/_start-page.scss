@@ -23,3 +23,20 @@
     padding: 15px 100px;
   }
 }
+
+.countdown {
+  position: fixed;
+  inset: 0;
+  background-color: $myColorWhite;
+
+  p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+  }
+}
+
+.CD-hide {
+  display: none;
+}

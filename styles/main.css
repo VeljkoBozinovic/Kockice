@@ -108,6 +108,22 @@
   padding: 15px 100px;
 }
 
+.countdown {
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+}
+.countdown p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+}
+
+.CD-hide {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
