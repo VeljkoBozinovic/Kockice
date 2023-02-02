@@ -46,7 +46,7 @@ elBtnRoll.addEventListener("click", () => {
     } else {
       elP2Current.textContent = "Current: 0";
       scoreP2 += current;
-      scoreP2.textContent = `Score: ${scoreP2}`;
+      elP2Score.textContent = `Score: ${scoreP2}`;
       playerOneTurn = true;
       elArrowLeft.classList.remove("displayTurnLeft");
       elArrowRight.classList.add("displayTurnRight");
@@ -59,11 +59,13 @@ elBtnRoll.addEventListener("click", () => {
       : (elP2Current.textContent = `Current: ${current}`);
   }
 
-  if (scoreP1 + current >= 50 || scoreP2 + current >= 50)
+  if (playerOneTurn === true && scoreP1 + current >= 50) {
     elWinnerPage.classList.remove("winner-hide");
-  playerOneTurn === true
-    ? (elWinnerName.innerHTML = nameOne)
-    : (elWinnerName.innerHTML = nameTwo);
+    elWinnerName.innerHTML = nameOne;
+  } else if (playerOneTurn === false && scoreP2 + current >= 50) {
+    elWinnerPage.classList.remove("winner-hide");
+    elWinnerName.innerHTML = nameTwo;
+  }
 });
 
 elBtnStore.addEventListener("click", () => {
