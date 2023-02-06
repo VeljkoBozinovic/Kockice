@@ -31,7 +31,7 @@ function countdownTimer() {
   let myInterval = setInterval(() => {
     CD--;
 
-    if (CD < 1) {
+    if (CD === 1) {
       elCDParagraph.innerHTML = "Start!";
       setTimeout(() => {
         clearInterval(myInterval);

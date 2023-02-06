@@ -29,11 +29,11 @@ const elWinnerName = document.querySelector(".winner-container-player-name");
 elBtnRoll.addEventListener("click", () => {
   diceRandom = Math.floor(Math.random() * 6) + 1;
 
-  playerOneTurn === true
+  playerOneTurn
     ? (elP1Dice.src = `images/dice-${diceRandom}.png`)
     : (elP2Dice.src = `images/dice-${diceRandom}.png`);
 
-  if (diceRandom === 1) {
+  if (diceRandom) {
     current = 0;
 
     if (playerOneTurn === true) {
@@ -54,22 +54,22 @@ elBtnRoll.addEventListener("click", () => {
   } else {
     current += diceRandom;
 
-    playerOneTurn === true
+    playerOneTurn
       ? (elP1Current.textContent = `Current: ${current}`)
       : (elP2Current.textContent = `Current: ${current}`);
   }
 
-  if (playerOneTurn === true && scoreP1 + current >= 50) {
+  if (playerOneTurn && scoreP1 + current >= 50) {
     elWinnerPage.classList.remove("winner-hide");
     elWinnerName.innerHTML = nameOne;
-  } else if (playerOneTurn === false && scoreP2 + current >= 50) {
+  } else if (playerOneTurn && scoreP2 + current >= 50) {
     elWinnerPage.classList.remove("winner-hide");
     elWinnerName.innerHTML = nameTwo;
   }
 });
 
 elBtnStore.addEventListener("click", () => {
-  if (playerOneTurn === true) {
+  if (playerOneTurn) {
     scoreP1 += current;
     current = 0;
     elP1Current.textContent = `Current: ${current}`;
